@@ -13,15 +13,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         array = (Item[]) new Object[10];
     }
 
-    // construct an randomized queue with predefined size
-    public RandomizedQueue(int size) {
-        if (size < 0) {
-            throw new IllegalArgumentException("size cannot be less than 0");
-        }
-
-        array = (Item[]) new Object[size];
-    }
-
     // is the randomized queue empty?
     public boolean isEmpty() {
         return size() == 0;
@@ -155,7 +146,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         System.out.println(queue.size());
 
         System.out.println("Adding-removing sequence: ");
-        queue = new RandomizedQueue<>(0);
         queue.enqueue("a");
         System.out.println(queue.dequeue());
         queue.enqueue("b");
